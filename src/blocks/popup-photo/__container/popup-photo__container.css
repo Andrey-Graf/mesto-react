@@ -1,0 +1,7 @@
+.popup-photo__container {
+    position: relative;
+    background: transparent;
+    box-sizing: border-box;
+    font-size: 0;
+    min-width: 240px;
+}

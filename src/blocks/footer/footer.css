@@ -1,0 +1,23 @@
+.footer {
+    max-width: 880px;
+    min-width: 320px;
+    width: 68%;
+    margin: 0;
+    padding: 66px 0 60px 0;
+    flex-shrink: 0;
+    font-family: 'inter', 'Helvetica Neue', Arial, sans-serif;
+    display: flex;
+    align-self: center;
+}
+
+@media screen and (max-width: 950px) {
+    .footer {
+        padding-left: 19px;
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .footer {
+        padding: 48px 0 36px;
+    }
+}

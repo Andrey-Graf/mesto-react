@@ -1,0 +1,8 @@
+.photo-grid__image {
+    max-width: 282px;
+    max-height: 282px;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    cursor: pointer;
+}

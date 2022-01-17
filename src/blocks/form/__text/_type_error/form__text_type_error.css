@@ -1,0 +1,8 @@
+.form__text_type_error {
+    border-bottom: 1px solid #FF0000;
+    margin-top: 13px;
+}
+
+/* .form__text_type_error:first-child {
+    margin-top: 0;
+} */

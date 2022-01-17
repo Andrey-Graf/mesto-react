@@ -1,0 +1,22 @@
+.photo-grid__elements {
+    position: relative;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px 17px;
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+@media screen and (max-width: 950px) {
+    .photo-grid__elements {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 590px) {
+    .photo-grid__elements {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

@@ -1,0 +1,14 @@
+.photo-grid__like-count {
+    position: relative;
+    padding: 0;
+    max-width: 10px;
+    max-height: 13px;
+    margin-top: 3px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+    color: #000000;
+}

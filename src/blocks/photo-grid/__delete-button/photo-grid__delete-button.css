@@ -1,0 +1,18 @@
+.photo-grid__delete-button {
+    position: absolute;
+    padding: 0;
+    max-width: 18px;
+    max-height: 19.3px;
+    width: 100vw;
+    height: 100vh;
+    top: 18px;
+    right: 15px;
+    border: none;
+    box-sizing: border-box;
+    background: none;
+    background-image: url(../../../images/delete-button.svg);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: cover;
+    cursor: pointer; /*это не состояние навидения?*/
+}

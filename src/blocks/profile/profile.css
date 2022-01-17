@@ -1,0 +1,14 @@
+.profile {
+    position: relative;
+    max-width: 880px;
+    margin: 40px auto 0;
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Inter', Arial, sans-serif;
+}
+
+@media screen and (max-width: 590px) {
+    .profile {
+        flex-direction: column;
+    }
+}
