@@ -11,7 +11,7 @@ function Card(props) {
         <li className="photo-grid__element">
             <figure className="photo-grid__figure">
                 <img src={`${props.card.link}`} alt={`${props.card.name}`} className="photo-grid__image" onClick={handleClick}/>
-                <button type="button" className="photo-grid__delete-button" aria-label="Удалить"></button>
+                <button type="button" className="photo-grid__delete-button" aria-label="Удалить" onClick={props.onClick}></button>
                 <figcaption className="photo-grid__group">
                     <h2 className="photo-grid__caption">{props.card.name}</h2>
                     <div className="photo-grid__like-group">

@@ -3,9 +3,9 @@ import api from './../utils/Api';
 import Card from './Card';
 
 function Main(props) {
-    const [userName, setUserName] = React.useState();
-    const [userDescription, setUserDescription] = React.useState();
-    const [userAvatar, setUserAvatar] = React.useState();
+    const [userName, setUserName] = React.useState('');
+    const [userDescription, setUserDescription] = React.useState('');
+    const [userAvatar, setUserAvatar] = React.useState('');
     const [cards, setCards] = React.useState([]);
 
     React.useEffect(() => {
@@ -15,18 +15,17 @@ function Main(props) {
             setUserDescription(userData.about);
             setUserAvatar(userData.avatar);
             setCards(cardsData);
-        },
-            (err) => {
-                console.log(err);
-            }
-        )
+        })
+        .catch((err) => {
+            console.log(err);
+        })
     }, [])
 
     return (
         <main className="content">
             <section className="profile">
                 <div className="profile__container-info">
-                    <img src={userAvatar} alt={userName} className="profile__avatar" style={{ backgroundImage: `url(${userAvatar})` }} />
+                    <img src={userAvatar} alt={userName} className="profile__avatar" />
                     <button className="profile__avatar-edit-btn" aria-label="Редактировать фотографию профиля" onClick={props.onEditAvatar}></button>
                     <div className="profile__edit">
                         <div className="profile__info">
@@ -40,7 +39,7 @@ function Main(props) {
             </section>
             <section className="photo-grid">
                 <ul className="photo-grid__elements">
-                    {cards.map((card) => <Card key={card._id} card={card} onCardClick={props.onCardClick} />)}
+                    {cards.map((card) => <Card key={card._id} card={card} onCardClick={props.onCardClick} onClick={props.onClick}/>)}
                 </ul>
             </section>
         </main>
