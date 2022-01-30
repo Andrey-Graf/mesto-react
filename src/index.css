@@ -20,6 +20,8 @@
 @import url(../src/blocks/photo-grid/__figure/photo-grid__figure.css);
 @import url(../src/blocks/photo-grid/__image/photo-grid__image.css);
 @import url(../src/blocks/photo-grid/__delete-button/photo-grid__delete-button.css);
+@import url(../src/blocks/photo-grid/__delete-button/_hidden/photo-grid__delete-button-hidden.css);
+@import url(../src/blocks/photo-grid/__delete-button/_visible/photo-grid__delete-button_visible.css);
 @import url(../src/blocks/photo-grid/__group/photo-grid__group.css);
 @import url(../src/blocks/photo-grid/__caption/photo-grid__caption.css);
 @import url(../src/blocks/photo-grid/__like-group/photo-grit__like-group.css);
