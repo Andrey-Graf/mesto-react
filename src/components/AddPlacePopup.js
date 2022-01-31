@@ -2,8 +2,16 @@ import React from "react";
 import PopupWithForm from "./PopupWithForm";
 
 function AddPlacePopup(props) {
-    const name = React.useRef([]);
-    const link = React.useRef([]);
+    const [name, setName] = React.useState([]);
+    const [link, setLink] = React.useState([]);
+
+    function handleNameChange(e) {
+        setName(e.target.value);
+    }
+
+    function handleLinkChange(e) {
+        setLink(e.target.value);
+    }
 
     function handleSubmit(e) {
         // Запрещаем браузеру переходить по адресу формы
@@ -11,8 +19,8 @@ function AddPlacePopup(props) {
 
         // Передаём значения управляемых компонентов во внешний обработчик
         props.onAddPlace({
-            name: name.current.value,
-            link: link.current.value,
+            name,
+            link,
         });
     }
 
@@ -26,9 +34,9 @@ function AddPlacePopup(props) {
             onClose={props.onClose}
             ariaLabel="Создать"
             buttonText="Создать">
-            <input ref={name} type="text" name="name" id="photo-name" placeholder="Название" className="form__text" minLength="2" maxLength="30" required />
+            <input value={name} onChange={handleNameChange} type="text" name="name" id="photo-name" placeholder="Название" className="form__text" minLength="2" maxLength="30" required />
             <span className="form__input-error" id="photo-name-error"></span>
-            <input ref={link} type="url" name="link" id="photo-link" placeholder="Ссылка на картинку" className="form__text" minLength="2" required />
+            <input value={link} onChange={handleLinkChange} type="url" name="link" id="photo-link" placeholder="Ссылка на картинку" className="form__text" minLength="2" required />
             <span className="form__input-error" id="photo-link-error"></span>
         </PopupWithForm>
     )

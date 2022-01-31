@@ -19,7 +19,7 @@ function App() {
     const [isConfirmPopupOpen, setIsConfirmPopupOpen] = React.useState(false);
     const [selectedCard, setSelectedCard] = React.useState({});
     const [isImagePopupOpen, setIsImagePopupOpen] = React.useState(false);
-    const [currentUser, setCurrentUser] = React.useState('');
+    const [currentUser, setCurrentUser] = React.useState({});
     const [cards, setCards] = React.useState([]);
     const [cardDelet, setCardDelet] = React.useState({});
 

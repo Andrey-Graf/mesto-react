@@ -23,12 +23,12 @@ function Main(props) {
             </section>
             <section className="photo-grid">
                 <ul className="photo-grid__elements">
-                    {props.cards.map((card) =>
+                    {props.cards.map((card) => (
                         <Card key={card._id}
-                            card={card}
-                            onCardClick={props.onCardClick}
-                            onCardDelete={props.onCardDelete}
-                            onCardLike={props.onCardLike} />)}
+                        card={card}
+                        onCardClick={props.onCardClick}
+                        onCardDelete={props.onCardDelete}
+                        onCardLike={props.onCardLike} />))}
                 </ul>
             </section>
         </main>

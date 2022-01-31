@@ -3,14 +3,10 @@ import PopupWithForm from "./PopupWithForm";
 import { CurrentUserContext } from "../contexts/CurrentUserContext";
 
 function EditProfilePopupOpen(props) {
+    const [name, setName] = React.useState({});
+    const [description, setDescription] = React.useState({});
     const currentUser = React.useContext(CurrentUserContext);
-    const [name, setName] = React.useState('');
-    const [description, setDescription] = React.useState('');
-
-    React.useEffect(() => {
-        setName(currentUser.name);
-        setDescription(currentUser.about);
-    }, [currentUser]);
+    // Consolе ругаеться на то что компонент CurrentUserContext выполняе вход как не контролируемый компонент 
 
     function handleNameChange(e) {
         setName(e.target.value);
@@ -19,6 +15,11 @@ function EditProfilePopupOpen(props) {
     function handleAboutChange(e) {
         setDescription(e.target.value);
     }
+
+    React.useEffect(() => {
+        setName(currentUser.name);
+        setDescription(currentUser.about);
+    }, [currentUser, props.isOpen]);
 
     function handleSubmit(e) {
         // Запрещаем браузеру переходить по адресу формы
